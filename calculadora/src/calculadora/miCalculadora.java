@@ -486,10 +486,16 @@ public class miCalculadora extends javax.swing.JFrame {
     }                                    
 
     private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        if(!this.pantalla.getText().contains(".")){
+        if(!numeroActual.contains(".")){
+        
+        if(numeroActual.equals("")){
+            this.pantalla.setText(this.pantalla.getText()+"0.");
+            numeroActual = "0.";
+        }else{
             this.pantalla.setText(this.pantalla.getText()+".");
             numeroActual += ".";
         }
+    }
     }                                        
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {                                        
