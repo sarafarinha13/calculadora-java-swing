@@ -17,7 +17,7 @@ public class miCalculadora extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jButton11 = new javax.swing.JButton();
@@ -352,34 +352,36 @@ public class miCalculadora extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }                                         
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    }                                         
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13ActionPerformed
+    }                                         
 
-    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-        this.pantalla.setText(this.pantalla.getText()+"9");       
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        this.pantalla.setText(this.pantalla.getText()+"9");    
+        numeroActual += "9";
        
-    }//GEN-LAST:event_btn9ActionPerformed
+    }                                    
 
-    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {                                         
         this.pantalla.setText("");
              
         //resetea variables         
         operaciones.clear();
+        numeroActual = "0";
  
-    }//GEN-LAST:event_btnResetActionPerformed
+    }                                        
 
-    private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
+    private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {                                         
        
         operaciones.add(numeroActual);
         calculo = Double.parseDouble(operaciones.get(0));
@@ -411,59 +413,63 @@ public class miCalculadora extends javax.swing.JFrame {
         operaciones.clear();
         numeroActual = String.valueOf(calculo);
         
-    }//GEN-LAST:event_btnIgualActionPerformed
+    }                                        
 
-    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"7");
         numeroActual += "7";
-    }//GEN-LAST:event_btn7ActionPerformed
+    }                                    
 
-    private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelActionPerformed
+    private void btnDelActionPerformed(java.awt.event.ActionEvent evt) {                                       
         String texto = this.pantalla.getText();
         
         if(texto.length()>0){
+            //borro pantalla
             this.pantalla.setText(
                 texto.substring(0, texto.length()-1) //borra el ultimo valor de la cadena
             );
+            if(numeroActual.length() > 0){
+            numeroActual = numeroActual.substring(0, numeroActual.length()-1);
         }
-    }//GEN-LAST:event_btnDelActionPerformed
+        }
+    }                                      
 
-    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"8");
         numeroActual += "8";
-    }//GEN-LAST:event_btn8ActionPerformed
+    }                                    
 
-    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"4");
         numeroActual += "4";
-    }//GEN-LAST:event_btn4ActionPerformed
+    }                                    
 
-    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"5");
         numeroActual += "5";
-    }//GEN-LAST:event_btn5ActionPerformed
+    }                                    
 
-    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"6");
         numeroActual += "6";
-    }//GEN-LAST:event_btn6ActionPerformed
+    }                                    
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"1");
         numeroActual += "1";
-    }//GEN-LAST:event_btn1ActionPerformed
+    }                                    
 
-    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"3");
         numeroActual += "3";
-    }//GEN-LAST:event_btn3ActionPerformed
+    }                                    
 
-    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"2");
         numeroActual += "2";
-    }//GEN-LAST:event_btn2ActionPerformed
+    }                                    
 
-    private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
+    private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {                                            
        
         this.pantalla.setText(this.pantalla.getText()+"/"); 
             
@@ -472,21 +478,21 @@ public class miCalculadora extends javax.swing.JFrame {
         
         numeroActual = "";
         
-    }//GEN-LAST:event_btnDivisionActionPerformed
+    }                                           
 
-    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         this.pantalla.setText(this.pantalla.getText()+"0");
         numeroActual += "0";
-    }//GEN-LAST:event_btn0ActionPerformed
+    }                                    
 
-    private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
+    private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {                                         
         if(!this.pantalla.getText().contains(".")){
             this.pantalla.setText(this.pantalla.getText()+".");
             numeroActual += ".";
         }
-    }//GEN-LAST:event_btnPuntoActionPerformed
+    }                                        
 
-    private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
+    private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {                                        
        
        this.pantalla.setText(this.pantalla.getText()+"+");
        
@@ -494,9 +500,9 @@ public class miCalculadora extends javax.swing.JFrame {
        operaciones.add("+");
        
        numeroActual = "";
-    }//GEN-LAST:event_btnSumaActionPerformed
+    }                                       
 
-    private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
+    private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {                                         
       
         this.pantalla.setText(this.pantalla.getText()+"-");
         
@@ -505,9 +511,9 @@ public class miCalculadora extends javax.swing.JFrame {
         
         numeroActual = "";
         
-    }//GEN-LAST:event_btnRestaActionPerformed
+    }                                        
 
-    private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
+    private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         
         this.pantalla.setText(this.pantalla.getText()+"*");
         
@@ -515,7 +521,7 @@ public class miCalculadora extends javax.swing.JFrame {
         operaciones.add("*");
         
         numeroActual = "0";
-    }//GEN-LAST:event_btnMultiplicacionActionPerformed
+    }                                                 
 
     /**
      * @param args the command line arguments
@@ -552,7 +558,7 @@ public class miCalculadora extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton btn0;
     private javax.swing.JButton btn1;
     private javax.swing.JButton btn2;
@@ -576,5 +582,5 @@ public class miCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JPanel panelCalculadora;
     private javax.swing.JLabel pantalla;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
